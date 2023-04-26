@@ -1,8 +1,9 @@
 import Departments from "./pages/Departments";
+import {Container} from "@material-ui/core";
 
 export default function App()
 {
-    return <div id="app-wrapper">
+    return <Container>
         <Departments />
-    </div>
+    </Container>
 }

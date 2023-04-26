@@ -1,0 +1,15 @@
+.MuiTabs-root
+{
+    box-shadow: 0 4px 8px 0 #dfdfdf70;
+
+    .MuiTab-root,
+    .PrivateTabIndicator-colorSecondary-3 {
+        width: calc(100% / 4) !important;
+    }
+
+    .MuiTab-root {
+        max-width: unset;
+        padding: 18px 12px;
+    }
+}
+

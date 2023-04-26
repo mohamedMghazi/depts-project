@@ -7,6 +7,7 @@ import store from "./utils/redux";
 
 // main and global styles
 import "normalize.css";
+import "./styles/Main.scss";
 
 const MAIN_WRAPPER = document.getElementById('main-wrapper')
 const root = ReactDOM.createRoot(MAIN_WRAPPER);
