@@ -1,0 +1,11 @@
+@use "../../styles/_partials/variables" as colors;
+
+h2
+{
+    font-size: 14px;
+    color: colors.$folly;
+
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}

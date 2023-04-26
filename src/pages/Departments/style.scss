@@ -1,0 +1,7 @@
+@use "../../styles/_partials/variables" as colors;
+
+#tabs-wrapper {
+    position: sticky;
+    top: 0;
+    background: colors.$white;
+}

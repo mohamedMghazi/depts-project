@@ -6,7 +6,7 @@ export const fetchEngineers = (department) => async (dispatch) => {
         dispatch({ type: FETCH_ENGINEERS_PENDING,  payload: { department } });
 
         const response = await fetchEngineersData(department);
-        const data = response.data;
+        const data = response;
         const count = data.length;
 
         dispatch({
