@@ -1,0 +1,25 @@
+@use "../../styles/_partials/variables" as colors;
+
+#engineers-profile-wrapper
+{
+    display: flex;
+    flex-direction: column;
+
+    .engineer-profile
+    {
+        flex-grow: 1;
+        margin-top: 15px;
+        height: calc(100vh - 100px);
+        background: colors.$white;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.1), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+        border-radius: 10px;
+
+        .paper
+        {
+            height: 100%;
+            text-align: center;
+            color: colors.$secondary-color;
+        }
+    }
+
+}

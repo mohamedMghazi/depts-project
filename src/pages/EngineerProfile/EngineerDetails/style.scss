@@ -1,0 +1,21 @@
+.engineer-details
+{
+    height: 100%;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .engineer-details-sub-section
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding: 1rem 0 1rem 1rem;
+        border-bottom: 1px solid #222;
+    }
+}

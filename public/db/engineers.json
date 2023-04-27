@@ -129,48 +129,32 @@
         ]
     },
     {
-        "name": "Samantha G.",
-        "age": 30,
-        "email": "samantha.g@example.com",
+        "name": "Samantha Green",
+        "phone": "555-5678",
+        "gender": "Female",
+        "age": 29,
         "department": "Evastel",
-        "address": {
-            "street": "123 Main St",
-            "city": "Anytown",
-            "state": "CA",
-            "zip": "12345"
-        },
-        "phone": {
-            "home": "555-555-1234",
-            "cell": "555-555-5678"
-        },
         "github": {
-            "username": "samanthag",
+            "username": "jadeb",
             "url": "https://github.com/samanthag",
-            "projects": [
-                {
-                    "name": "Project A",
-                    "description": "A web app for tracking fitness goals.",
-                    "languages": [
-                        "Python",
-                        "JavaScript",
-                        "HTML",
-                        "CSS"
-                    ]
-                },
-                {
-                    "name": "Project B",
-                    "description": "A machine learning model for predicting customer churn.",
-                    "languages": [
-                        "Python",
-                        "SQL"
-                    ]
-                }
-            ]
-        }
+            "location": "paris",
+            "lastcontributions": 1180
+        },
+        "projects": [
+            { "name": "Project M", "rank": 8 },
+            { "name": "Project N", "rank": 5 },
+            { "name": "Project O", "rank": 7 }
+        ],
+        "timeline": [
+            { "data": "02/02/2023", "kpi": 90 },
+            { "data": "02/03/2023", "kpi": 100 },
+            { "data": "02/04/2023", "kpi": 110 }
+        ]
     },
     {
         "name": "Emily Brown",
-        "phone": "555-3456","gender": "Female",
+        "phone": "555-3456",
+        "gender": "Female",
         "age": 31,
         "department": "Evastel",
         "github": {

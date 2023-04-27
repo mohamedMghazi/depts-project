@@ -1,15 +1,18 @@
 import { memo } from 'react';
 import PropTypes from 'prop-types';
 import { TableCell, TableRow } from "@material-ui/core";
+import {Link} from "react-router-dom";
+import "./style.scss";
 
 const TableRowWrapper = memo(({ engineerData }) => {
-    const { name, phone, age } = engineerData;
-    const formattedPhone = typeof phone === "object" ? phone.cell : phone;
+    const { name, phone, age, department } = engineerData;
 
     return (
         <TableRow>
-            <TableCell>{name}</TableCell>
-            <TableCell>{formattedPhone}</TableCell>
+            <TableCell>
+                <Link id={"engineer-name-as-link"} to={`/${department}/${name}`}>{name}</Link>
+            </TableCell>
+            <TableCell>{phone}</TableCell>
             <TableCell>{age}</TableCell>
         </TableRow>
     );
@@ -18,13 +21,8 @@ const TableRowWrapper = memo(({ engineerData }) => {
 TableRowWrapper.propTypes = {
     engineerData: PropTypes.shape({
         name: PropTypes.string.isRequired,
-        phone: PropTypes.oneOfType([
-            PropTypes.string.isRequired,
-            PropTypes.shape({
-                cell: PropTypes.string.isRequired,
-                home: PropTypes.string
-            }).isRequired,
-        ]),
+        department: PropTypes.string.isRequired,
+        phone: PropTypes.string.isRequired,
         age: PropTypes.number.isRequired,
     }).isRequired,
 };
