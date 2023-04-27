@@ -4,21 +4,24 @@ import {Grid} from "@material-ui/core";
 
 // styles
 import "./style.scss";
+import {Fade} from "react-awesome-reveal";
 
 const EngineerCard = memo(function ({ image, name, age, location }) {
     return <Grid item xs={12} sm={4}>
         <div className={"paper engineer-card"}>
-            <div className="engineer-image-wrapper">
-                <img src={image} alt={name} />
-            </div>
+            <Fade direction={"left"} cascade damping={0.1}>
+                <div className="engineer-image-wrapper">
+                    <img src={image} alt={name} />
+                </div>
 
-            <h1>{name}</h1>
+                <h1>{name}</h1>
 
-            <div className="meta-data">
-                <h3>{age}</h3>
-                {location && " - "}
-                {location && <a href={`https://www.google.com/maps/place/${location}`} rel={"noreferrer"} target={"_blank"}>{location}</a>}
-            </div>
+                <div className="meta-data">
+                    <h3>{age}</h3>
+                    {location && " - "}
+                    {location && <a href={`https://www.google.com/maps/place/${location}`} rel={"noreferrer"} target={"_blank"}>{location}</a>}
+                </div>
+            </Fade>
         </div>
     </Grid>
 })

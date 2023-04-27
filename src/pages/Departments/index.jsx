@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {Tab, Tabs} from "@material-ui/core";
+import {Fade} from "react-awesome-reveal";
 
 // components
 import DepartmentTable from "../../containers/DepartmentTable";
@@ -18,12 +19,16 @@ export default function Departments()
     };
 
     return <div id="departments-page-wrapper">
-        <Tabs value={value} onChange={handleChange} id={"tabs-wrapper"}>
-            {DEPARTMENTS.map((department) => (
-                <Tab key={department} label={department} />
-            ))}
-        </Tabs>
+        <Fade direction={"down"} duration={1100}>
+            <Tabs value={value} onChange={handleChange} id={"tabs-wrapper"}>
+                {DEPARTMENTS.map((department) => (
+                    <Tab key={department} label={department} />
+                ))}
+            </Tabs>
+        </Fade>
 
-        <DepartmentTable department={DEPARTMENTS[value]} />
+        <Fade direction={"up"}>
+            <DepartmentTable department={DEPARTMENTS[value]} />
+        </Fade>
     </div>
 }

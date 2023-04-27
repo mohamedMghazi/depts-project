@@ -19,6 +19,10 @@
         width: calc(100% - 50px);
         padding: 1rem 0;
 
+        .animation-block-wrapper {
+            width: 100%;
+        }
+
         .MuiTypography-h6 {
             color: colors.$primary-color;
             text-align: left;
