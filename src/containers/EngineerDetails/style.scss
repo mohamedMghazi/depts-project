@@ -1,0 +1,43 @@
+@use "../../styles/_partials/variables" as colors;
+
+.engineer-details
+{
+    height: 100%;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .engineer-details-sub-section
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: calc(100% - 50px);
+        padding: 1rem 0;
+
+        .MuiTypography-h6 {
+            color: colors.$primary-color;
+            text-align: left;
+            width: 100%;
+            font-weight: 600;
+            border-bottom: 1px solid #222;
+        }
+
+        .MuiGrid-item
+        {
+            text-align: left;
+
+            h4 {
+                color: colors.$secondary-color;
+                font-weight: 550;
+                font-size: 16px;
+                margin: 10px 0;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

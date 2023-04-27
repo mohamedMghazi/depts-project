@@ -7,7 +7,7 @@ export default function BreadCrumb({ dept, engineer })
         <Link underline="hover" color="inherit" href="/">
             Home
         </Link>
-        <Typography color="text.primary">{dept}</Typography>
-        <Typography color="text.primary">{engineer}</Typography>
+        <Typography color={"initial"}>{dept}</Typography>
+        <Typography color={"initial"}>{engineer}</Typography>
     </Breadcrumbs>
 }
