@@ -1,11 +1,13 @@
 import { memo } from "react";
 import {Grid, Typography} from "@material-ui/core";
-import "./style.scss";
 
 // profile components
-import MainInfo from "../../components/MainInfo";
+import PersonalInformation from "../../components/PersonalInformation";
 import GithubInfo from "../../components/GithubInfo";
 import ProjectTimeline from "../ProjectTimeline";
+
+// styles
+import "./style.scss";
 
 const EngineerDetails = memo(function({ data }) {
     return <Grid item xs={12} sm={8}>
@@ -16,7 +18,7 @@ const EngineerDetails = memo(function({ data }) {
                 </Typography>
 
                 <Grid container>
-                    <MainInfo data={data} />
+                    <PersonalInformation data={data} />
                 </Grid>
             </div>
             <div className={"engineer-details-sub-section"}>
@@ -30,10 +32,13 @@ const EngineerDetails = memo(function({ data }) {
             </div>
             <div className={"engineer-details-sub-section"}>
                 <ProjectTimeline timeline={data?.timeline??[]} projects={data?.projects??[]} />
-            {/*<Chart chartName={data?.name + " projects"} data={data?.projects} />*/}
             </div>
         </div>
     </Grid>
 });
+
+EngineerDetails.defaultProps = {
+    data: {}
+}
 
 export default EngineerDetails;

@@ -1,17 +1,21 @@
 import PropTypes from "prop-types";
 import {TableBody} from "@material-ui/core";
-import TableRowWrapper from "./TableRowWrapper";
+import EngineersTableRow from "../EngineersTableRow";
 
-export default function TableBodyWrapper({ data })
+export default function EngineersTableBody({ data })
 {
     return <TableBody>
         {data.map(engineer => {
             const rowKey = engineer.name.replace(' ', '');
-            return <TableRowWrapper engineerData={engineer} key={rowKey} />
+            return <EngineersTableRow engineerData={engineer} key={rowKey} />
         })}
     </TableBody>
 }
 
-TableBodyWrapper.propTypes = {
+EngineersTableBody.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object),
+};
+
+EngineersTableBody.defaultProps = {
+    data: [],
 };

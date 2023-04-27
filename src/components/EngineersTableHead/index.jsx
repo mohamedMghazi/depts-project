@@ -1,6 +1,6 @@
 import {TableCell, TableHead, TableRow} from "@material-ui/core";
 
-export default function TableHeadWrapper()
+export default function EngineersTableHead()
 {
     return <TableHead>
         <TableRow>

@@ -1,9 +1,13 @@
 import {useState} from "react";
 import {Tab, Tabs} from "@material-ui/core";
+
+// components
 import DepartmentTable from "../../containers/DepartmentTable";
+
+// styles
 import "./style.scss";
 
-const departments = ["umbra", "evastel", "microsoft", "ookla"];
+const DEPARTMENTS = ["umbra", "evastel", "microsoft", "ookla"];
 
 export default function Departments()
 {
@@ -15,11 +19,11 @@ export default function Departments()
 
     return <div id="departments-page-wrapper">
         <Tabs value={value} onChange={handleChange} id={"tabs-wrapper"}>
-            {departments.map((department) => (
+            {DEPARTMENTS.map((department) => (
                 <Tab key={department} label={department} />
             ))}
         </Tabs>
 
-        <DepartmentTable department={departments[value]} />
+        <DepartmentTable department={DEPARTMENTS[value]} />
     </div>
 }

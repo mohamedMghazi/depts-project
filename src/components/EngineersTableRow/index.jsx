@@ -4,7 +4,7 @@ import { TableCell, TableRow } from "@material-ui/core";
 import {Link} from "react-router-dom";
 import "./style.scss";
 
-const TableRowWrapper = memo(({ engineerData }) => {
+const EngineersTableRow = memo(({ engineerData }) => {
     const { name, phone, age, department } = engineerData;
 
     return (
@@ -18,7 +18,7 @@ const TableRowWrapper = memo(({ engineerData }) => {
     );
 })
 
-TableRowWrapper.propTypes = {
+EngineersTableRow.propTypes = {
     engineerData: PropTypes.shape({
         name: PropTypes.string.isRequired,
         department: PropTypes.string.isRequired,
@@ -27,4 +27,4 @@ TableRowWrapper.propTypes = {
     }).isRequired,
 };
 
-export default TableRowWrapper;
+export default EngineersTableRow;

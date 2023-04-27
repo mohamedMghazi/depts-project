@@ -1,27 +1,19 @@
-import { useEffect, memo, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { memo } from "react";
 import { Table } from "@material-ui/core";
 import PropTypes from "prop-types";
-import { fetchEngineers } from "../../utils/redux/services/engineers/actions";
-import TableHeadWrapper from "../../components/TableHeadWrapper";
-import TableBodyWrapper from "../../components/TableBodyWrapper";
+import {useFetchEngineers} from "../../utils/hooks/useFetchEngineers";
+
+// components
+import EngineersTableHead from "../../components/EngineersTableHead";
+import EngineersTableBody from "../../components/EngineersTableBody";
 import Count from "../../components/Count";
 import Skeleton from "../../components/Skeleton";
+
+// styles
 import "./style.scss";
 
 const DepartmentTable = memo(({ department }) => {
-    const dispatch = useDispatch();
-    const { data, count, loading, error } = useSelector(
-        (state) => state.engineers[department]
-    );
-
-    const getEngineersData = useCallback(() => {
-        dispatch(fetchEngineers(department));
-    }, [department, dispatch]);
-
-    useEffect(() => {
-        getEngineersData();
-    }, [getEngineersData]);
+    const { data, count, loading, error } = useFetchEngineers(department);
 
     if (loading) {
         return <Skeleton />;
@@ -37,8 +29,8 @@ const DepartmentTable = memo(({ department }) => {
 
             {count > 0 && (
                 <Table>
-                    <TableHeadWrapper />
-                    <TableBodyWrapper data={data} />
+                    <EngineersTableHead />
+                    <EngineersTableBody data={data} />
                 </Table>
             )}
         </div>
@@ -48,5 +40,9 @@ const DepartmentTable = memo(({ department }) => {
 DepartmentTable.propTypes = {
     department: PropTypes.string.isRequired
 };
+
+DepartmentTable.defaultProps = {
+    department: ''
+}
 
 export default DepartmentTable;
