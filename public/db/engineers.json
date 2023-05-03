@@ -133,7 +133,7 @@
         "phone": "555-5678",
         "gender": "Female",
         "age": 29,
-        "department": "Evastel",
+        "department": "meta",
         "github": {
             "username": "jadeb",
             "url": "https://github.com/samanthag",
@@ -156,7 +156,7 @@
         "phone": "555-3456",
         "gender": "Female",
         "age": 31,
-        "department": "Evastel",
+        "department": "meta",
         "github": {
             "username": "jadeb",
             "url": "https://github.com/samanthag",
@@ -180,7 +180,7 @@
         "phone": "555-4567",
         "gender": "Male",
         "age": 37,
-        "department": "Evastel",
+        "department": "meta",
         "github": {
             "username": "jadeb",
             "url": "https://github.com/samanthag",

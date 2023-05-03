@@ -8,7 +8,7 @@ import {
 
 const INITIAL_STATE = {
     umbra: { data: [], count: 0, loading: false, error: null },
-    evastel: { data: [], count: 0, loading: false, error: null },
+    meta: { data: [], count: 0, loading: false, error: null },
     microsoft: { data: [], count: 0, loading: false, error: null },
     ookla: { data: [], count: 0, loading: false, error: null },
     engineerData: { data: {}, loading: false, error: null }

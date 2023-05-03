@@ -8,7 +8,7 @@ import DepartmentTable from "../../containers/DepartmentTable";
 // styles
 import "./style.scss";
 
-const DEPARTMENTS = ["umbra", "evastel", "microsoft", "ookla"];
+const DEPARTMENTS = ["umbra", "meta", "microsoft", "ookla"];
 
 export default function Departments()
 {

@@ -1,10 +1,10 @@
 import { memo } from 'react';
 import PropTypes from "prop-types";
 import {Grid} from "@material-ui/core";
+import {Fade} from "react-awesome-reveal";
 
 // styles
 import "./style.scss";
-import {Fade} from "react-awesome-reveal";
 
 const EngineerCard = memo(function ({ image, name, age, location }) {
     return <Grid item xs={12} sm={4}>
